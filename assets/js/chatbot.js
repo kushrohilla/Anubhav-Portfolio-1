@@ -1,155 +1,172 @@
-// Portfolio Chatbot - Sushant Rana
-// FAQ-based chatbot with contact page fallback
+// Professional AI Assistant - Anubhav Rohilla
+// Enhanced with rich professional context and improved interaction logic
 
 (function () {
     'use strict';
 
-    // Knowledge base for the chatbot
-    const knowledgeBase = {
-        greetings: [
-            "Hi! I'm Sushant's AI assistant. How can I help you today?",
-            "Hello! 👋 I can answer questions about Sushant's skills, experience, and availability. What would you like to know?"
-        ],
+    // Advanced technical and professional knowledge base
+    const anubhavContext = {
+        name: "Anubhav Rohilla",
+        role: "AI/ML Engineer",
+        mission: "Bridging the gap between cutting-edge Machine Learning models and production-ready business solutions.",
+        expertise: ["NLP", "MLOps", "Deep Learning", "Full-Stack AI APIs"],
 
-        responses: {
-            // Skills
-            'skills': "Sushant specializes in:\n\n☁️ **Salesforce**: Admin, Apex, LWC, Flows, Security Model, REST API\n\n🤖 **AI & Automation**: LLM Integration, Python, Computer Vision, NLP\n\n🛠️ **Development**: FastAPI, React, Flutter, System Design\n\nWant to know more about a specific area?",
-            'salesforce': "Sushant is a **Salesforce Certified Agentforce Specialist** with hands-on experience in:\n\n• Apex Development & Triggers\n• Lightning Web Components (LWC)\n• Flows & Process Automation\n• Security Model & Sharing Rules\n• REST/SOAP API Integrations\n\nHe was mentored by a Salesforce Architect with 12+ years of industry experience.",
-            'ai': "Sushant combines AI with business solutions:\n\n• AI Agent Development\n• LLM Integration & Prompting\n• Computer Vision (OpenCV, MediaPipe)\n• Natural Language Processing\n• Intelligent Automation Workflows\n\nHe uses AI to solve real business problems, not just for tech demos.",
-
-            // Experience
-            'experience': "Sushant has real-world experience:\n\n💼 **Junior Software Engineer (Intern)**\n• Worked on production CRM workflows\n• Built automation flows\n• API integrations\n\n👨‍🏫 **Salesforce Architecture Mentorship**\n• Remote training under 12+ years industry expert\n• Real project guidance with international client exposure",
-            'internship': "During his internship as a Junior Software Engineer, Sushant:\n\n• Worked on production-level enterprise systems\n• Built automation flows for CRM workflows\n• Integrated third-party APIs\n• Collaborated on system design documentation",
-
-            // Availability
-            'available': "Yes! Sushant is actively seeking opportunities.\n\n✅ Open to: Salesforce Developer / Admin / Consultant roles\n📍 Preference: WFH or Hybrid\n💰 Target: ₹8-12 LPA range\n\nReady to start immediately!",
-            'hire': "Great question! Here's why you should hire Sushant:\n\n✅ **Business-First Thinking** - Understands requirements before coding\n✅ **Real Mentorship** - Trained by a 12+ year Salesforce Architect\n✅ **Salesforce + AI Hybrid** - Unique skill combination\n✅ **Remote-Ready** - Comfortable with WFH/async work\n\n<a href='contact.html'>📩 Get in touch</a>",
-
-            // Contact
-            'contact': "You can reach Sushant at:\n\n📧 **Email**: sushantrana2005@gmail.com\n💼 **LinkedIn**: <a href='https://linkedin.com/in/sushantrana05' target='_blank'>linkedin.com/in/sushantrana05</a>\n🐙 **GitHub**: <a href='https://github.com/imSushant2005' target='_blank'>github.com/imSushant2005</a>\n\nOr use the <a href='contact.html'>contact form</a>!",
-            'email': "Sushant's email is: **sushantrana2005@gmail.com**\n\nOr you can use the <a href='contact.html'>contact form</a> to send a message directly!",
-
-            // Projects
-            'projects': "Sushant has built several business-focused solutions:\n\n🌐 **Langua Link** - Real-time translation platform\n🤖 **AI Support Chatbot** - Customer query automation\n🏥 **Medical Diagnosis Assistant** - ML-powered diagnosis\n👊 **FightCam AI** - Security monitoring system\n\n<a href='projects.html'>View all projects →</a>",
-
-            // Certification
-            'certification': "Sushant holds the **Salesforce Certified Agentforce Specialist** certification.\n\nThis official Salesforce credential validates expertise in AI-powered CRM solutions.",
-
-            // Resume
-            'resume': "You can view or download Sushant's resume:\n\n📄 <a href='resume.html'>View Resume Page</a>\n⬇️ <a href='assets/Sushant_Rana.pdf' download>Download PDF</a>",
-
-            // Location
-            'location': "Sushant is based in **Uttarakhand, India**.\n\nHe's open to:\n• Remote (WFH) positions\n• Hybrid roles\n• Relocation for the right opportunity",
-
-            // Visitors
-            'visitors': "<img src='https://visitor-badge.laobi.icu/badge?page_id=imsushant2005.imsushant' alt='Visitors' style='height: 24px; vertical-align: middle;'> people have visited this portfolio!\n\nThanks for stopping by! 🎉"
+        platforms: {
+            linkedin: {
+                url: "https://linkedin.com/in/anubhav-rohilla",
+                description: "Over 500+ professional connections. Focuses on sharing insights about AI production pipelines, NLP research, and MLOps best practices."
+            },
+            github: {
+                url: "https://github.com/Anubhav-Rohilla",
+                description: "Home to 20+ repositories including the AI Resume Parser (92% NER precision) and high-performance Voice Synthesis pipelines."
+            },
+            kaggle: {
+                url: "#",
+                description: "Participates in competitions focusing on time-series forecasting and computer vision challenges."
+            }
         },
 
-        // Keywords to match
-        keywords: {
-            'skills': ['skill', 'skills', 'tech', 'technology', 'stack', 'know', 'expertise', 'good at', 'specialize'],
-            'salesforce': ['salesforce', 'apex', 'lwc', 'lightning', 'flow', 'crm', 'admin', 'sf'],
-            'ai': ['ai', 'artificial', 'intelligence', 'machine learning', 'ml', 'llm', 'automation', 'python'],
-            'experience': ['experience', 'work', 'worked', 'background', 'history', 'career'],
-            'internship': ['intern', 'internship', 'job', 'employment'],
-            'available': ['available', 'availability', 'looking', 'seeking', 'open', 'job', 'position', 'opportunity'],
-            'hire': ['hire', 'why', 'reason', 'choose', 'should'],
-            'contact': ['contact', 'reach', 'connect', 'talk', 'message', 'touch'],
-            'email': ['email', 'mail', 'e-mail'],
-            'projects': ['project', 'projects', 'work', 'portfolio', 'built', 'made', 'created'],
-            'certification': ['certification', 'certified', 'certificate', 'credential', 'agentforce'],
-            'resume': ['resume', 'cv', 'download', 'pdf'],
-            'location': ['location', 'where', 'based', 'live', 'city', 'country', 'remote', 'wfh'],
-            'visitors': ['visitor', 'visitors', 'visited', 'views', 'how many', 'count', 'traffic']
-        },
-
-        fallback: "I'm not sure about that specific question. For detailed discussions, please <a href='contact.html'>contact Sushant directly</a> — he'd love to hear from you! 📩"
+        career_highlights: [
+            "Architected an AI Resume Parser achieving 92% precision in NER.",
+            "Built a Real-Time Voice Synthesis pipeline with <400ms latency.",
+            "Certified Microsoft Azure AI Engineer Associate.",
+            "Standardized data for 98% integrity at Excelerate."
+        ]
     };
 
-    // Quick reply suggestions
-    const quickReplies = [
-        "What are your skills?",
-        "Salesforce experience?",
-        "Are you available?",
-        "View projects",
-        "Contact info"
-    ];
+    const knowledgeBase = {
+        greetings: {
+            generic: [
+                "Hello! I am Anubhav's AI Assistant. How can I help you explore his work today?",
+                "Hi there! 👋 Searching for an AI/ML expert? I can tell you all about Anubhav's skills and projects."
+            ],
+            morning: "Good morning! ☀️ Ready to discuss some intelligent system architecture with Anubhav?",
+            afternoon: "Good afternoon! ☕ Exploring Anubhav's AI/ML portfolio?",
+            evening: "Good evening! 🌙 How can I assist you with Anubhav's professional details tonight?"
+        },
 
-    // Create chatbot HTML
+        responses: {
+            'skills': `Anubhav's technical arsenal is divided into three core pillars:
+                \n🤖 **AI/ML & NLP**: TensorFlow, PyTorch, Transformers, LangChain, and LLM Orchestration.
+                \n💻 **Backend Engineering**: Robust APIs using Python (Flask/Django) and Node.js.
+                \n🛠️ **MLOps**: Docker, CI/CD, and Azure AI infrastructure for production scaling.`,
+
+            'ai': `As a **Microsoft Certified Azure AI Engineer**, Anubhav focuses on:
+                \n• **NLP**: Custom NER models and LLM fine-tuning.
+                \n• **Computer Vision**: Real-time detection with OpenCV.
+                \n• **Production ML**: Building MLOps pipelines that stay stable under load.`,
+
+            'experience': `Anubhav is currently a **Junior Software Engineer** at Techventive IT Solutions, where he:
+                \n• Leads AI feature implementation.
+                \n• Architects Python/Flask APIs.
+                \n• Manages Salesforce CRM data integrations.
+                \nPreviously, he interned at **Excelerate** and **YBI Foundation** focusing on data analysis and forecasting.`,
+
+            'linkedin': `You can find Anubhav on LinkedIn here: <a href="${anubhavContext.platforms.linkedin.url}" target="_blank">linkedin.com/in/anubhav-rohilla</a>. 
+                \n${anubhavContext.platforms.linkedin.description}`,
+
+            'github': `Anubhav's GitHub profile showcases his code-first approach: <a href="${anubhavContext.platforms.github.url}" target="_blank">github.com/Anubhav-Rohilla</a>.
+                \nHe actively maintains several open-source AI projects.`,
+
+            'platforms': `Anubhav is active across several professional platforms:
+                \n💼 **LinkedIn**: Networking and AI Insights.
+                \n🐙 **GitHub**: Code and Project Repositories.
+                \n📊 **Kaggle**: Data Science Competitions.
+                \n📄 **Medium**: Technical writing on AI (Coming soon).`,
+
+            'hire': `Why should you bring Anubhav into your team?
+                \n✅ **Production-First Mindset**: He doesn't just build models; he builds *systems*.
+                \n✅ **Azure Certified**: Validated expertise in enterprise AI.
+                \n✅ **Versatile Builder**: Equally comfortable in a PyTorch notebook or a Docker container.
+                \n<a href='contact.html'>📩 Click here to start a conversation</a>.`,
+
+            'projects': `Explore Anubhav's featured work:
+                \n📄 **AI Resume Parser**: High-precision recruitment automation.
+                \n🗣️ **Voice Cloning**: Authentic synthesis with low-latency.
+                \n📈 **Demand Forecasting**: Predictive time-series for retail.
+                \n<a href='projects.html'>View Project Gallery →</a>`,
+
+            'contact': `Let's connect! 
+                \n📧 **Email**: <a href="mailto:kushrohilla10@gmail.com">kushrohilla10@gmail.com</a>
+                \n📱 **Phone**: +91 7217262555
+                \n📍 **Location**: Dehradun, IN`,
+
+            'resume': `Review Anubhav's full track record:
+                \n📄 <a href='resume.html'>Interactive Resume</a>
+                \n⬇️ <a href='assets/Anubhav_Resume.pdf' download>Download PDF</a>`
+        },
+
+        keywords: {
+            'skills': ['skill', 'stack', 'tech', 'technologies', 'tools', 'know', 'expertise'],
+            'ai': ['ai', 'machine learning', 'ml', 'nlp', 'vision', 'llm', 'deep learning'],
+            'experience': ['work', 'job', 'history', 'role', 'company', 'position', 'intern'],
+            'linkedin': ['linkedin', 'profile'],
+            'github': ['github', 'git', 'repo', 'code'],
+            'platforms': ['platforms', 'online', 'social', 'internet', 'kaggle', 'medium'],
+            'hire': ['hire', 'why', 'benefit', 'value', 'join', 'team'],
+            'projects': ['project', 'portfolio', 'built', 'made', 'demo'],
+            'contact': ['contact', 'email', 'reach', 'touch', 'call', 'talk'],
+            'resume': ['resume', 'cv', 'pdf', 'background']
+        },
+
+        fallback: "I couldn't find a specific answer for that. However, I can discuss Anubhav's **skills**, **projects**, **LinkedIn profile**, or **experience**. What would you like to see?"
+    };
+
+    const quickReplies = ["Technical Skills", "AI Projects", "LinkedIn Profile", "Contact Info"];
+
     function createChatbotHTML() {
         const container = document.createElement('div');
         container.className = 'chatbot-container';
         container.innerHTML = `
             <div class="chatbot-window" id="chatbotWindow">
                 <div class="chatbot-header">
-                    <div class="chatbot-avatar">SR</div>
+                    <div class="chatbot-avatar" style="background: var(--accent); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                         <i data-feather="terminal" style="width: 20px; height: 20px;"></i>
+                    </div>
                     <div class="chatbot-info">
-                        <h4>Sushant's Assistant</h4>
-                        <span>● Online</span>
+                        <h4>Anubhav's AI Assistant</h4>
+                        <span>● System Online</span>
                     </div>
                 </div>
-                <div class="chatbot-messages" id="chatMessages">
-                    <!-- Messages will appear here -->
-                </div>
+                <div class="chatbot-messages" id="chatMessages"></div>
                 <div class="quick-replies" id="quickReplies">
                     ${quickReplies.map(q => `<button class="quick-reply">${q}</button>`).join('')}
                 </div>
                 <div class="chatbot-input">
-                    <input type="text" id="chatInput" placeholder="Ask me anything..." autocomplete="off">
-                    <button id="chatSend">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
+                    <input type="text" id="chatInput" placeholder="Ask about AI, skills, or experience..." autocomplete="off">
+                    <button id="chatSend"><i data-feather="send"></i></button>
                 </div>
             </div>
             <button class="chatbot-toggle" id="chatbotToggle">
-                <svg id="chatIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
-                <svg id="closeIcon" style="display:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
+                <i id="chatIcon" data-feather="message-square"></i>
+                <i id="closeIcon" data-feather="x" style="display:none;"></i>
             </button>
         `;
         document.body.appendChild(container);
+        feather.replace();
     }
 
-    // Match user input to knowledge base
+    function getGreeting() {
+        const hour = new Date().getHours();
+        if (hour < 12) return knowledgeBase.greetings.morning;
+        if (hour < 18) return knowledgeBase.greetings.afternoon;
+        return knowledgeBase.greetings.evening;
+    }
+
     function getResponse(input) {
         const lowerInput = input.toLowerCase();
 
-        // Check for greeting
-        if (/^(hi|hello|hey|hii|hola|namaste)/i.test(lowerInput)) {
-            return knowledgeBase.greetings[Math.floor(Math.random() * knowledgeBase.greetings.length)];
-        }
+        if (/hi|hello|hey|greetings/i.test(lowerInput)) return getGreeting();
+        if (/thanks|thank you/i.test(lowerInput)) return "You're very welcome! Is there anything else about Anubhav's work you'd like to know?";
 
-        // Check for thanks
-        if (/thank|thanks|thx/i.test(lowerInput)) {
-            return "You're welcome! 😊 Feel free to ask anything else, or <a href='contact.html'>contact Sushant</a> for more details.";
-        }
-
-        // Check for bye
-        if (/bye|goodbye|see you|later/i.test(lowerInput)) {
-            return "Goodbye! Feel free to come back anytime. Don't forget to <a href='contact.html'>get in touch</a> if you're interested! 👋";
-        }
-
-        // Match keywords
         for (const [key, keywords] of Object.entries(knowledgeBase.keywords)) {
-            for (const keyword of keywords) {
-                if (lowerInput.includes(keyword)) {
-                    return knowledgeBase.responses[key];
-                }
+            if (keywords.some(kw => lowerInput.includes(kw))) {
+                return knowledgeBase.responses[key];
             }
         }
-
-        // Fallback
         return knowledgeBase.fallback;
     }
 
-    // Add message to chat
     function addMessage(text, isUser = false) {
         const messagesContainer = document.getElementById('chatMessages');
         const message = document.createElement('div');
@@ -157,9 +174,9 @@
         message.innerHTML = text.replace(/\n/g, '<br>');
         messagesContainer.appendChild(message);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        if (!isUser) feather.replace();
     }
 
-    // Show typing indicator
     function showTyping() {
         const messagesContainer = document.getElementById('chatMessages');
         const typing = document.createElement('div');
@@ -170,63 +187,46 @@
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
 
-    // Hide typing indicator
     function hideTyping() {
         const typing = document.getElementById('typingIndicator');
         if (typing) typing.remove();
     }
 
-    // Handle user input
     function handleUserInput(input) {
         if (!input.trim()) return;
-
         addMessage(input, true);
         showTyping();
-
-        // Simulate typing delay
         setTimeout(() => {
             hideTyping();
-            const response = getResponse(input);
-            addMessage(response);
-        }, 500 + Math.random() * 500);
+            addMessage(getResponse(input));
+        }, 600);
     }
 
-    // Initialize chatbot
     function initChatbot() {
         createChatbotHTML();
-
         const toggle = document.getElementById('chatbotToggle');
         const window = document.getElementById('chatbotWindow');
         const input = document.getElementById('chatInput');
         const sendBtn = document.getElementById('chatSend');
         const chatIcon = document.getElementById('chatIcon');
         const closeIcon = document.getElementById('closeIcon');
-        const quickReplyBtns = document.querySelectorAll('.quick-reply');
 
-        // Toggle chat window
         toggle.addEventListener('click', () => {
             const isActive = window.classList.toggle('active');
             toggle.classList.toggle('active', isActive);
             chatIcon.style.display = isActive ? 'none' : 'block';
             closeIcon.style.display = isActive ? 'block' : 'none';
-
-            // Show greeting on first open
             if (isActive && document.getElementById('chatMessages').children.length === 0) {
-                setTimeout(() => {
-                    addMessage(knowledgeBase.greetings[0]);
-                }, 300);
+                setTimeout(() => addMessage(knowledgeBase.greetings.generic[0]), 300);
             }
-
             if (isActive) input.focus();
         });
 
-        // Send message on button click
         sendBtn.addEventListener('click', () => {
             handleUserInput(input.value);
             input.value = '';
         });
 
-        // Send message on Enter
         input.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 handleUserInput(input.value);
@@ -234,15 +234,11 @@
             }
         });
 
-        // Quick replies
-        quickReplyBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                handleUserInput(btn.textContent);
-            });
+        document.querySelectorAll('.quick-reply').forEach(btn => {
+            btn.addEventListener('click', () => handleUserInput(btn.textContent));
         });
     }
 
-    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initChatbot);
     } else {

@@ -12,16 +12,22 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushant Rana | Salesforce Developer | AI & CRM Solutions</title>
+    <title>Anubhav Rohilla | AI/ML Engineer | Data Scientist | Software Engineer</title>
     <meta name="description"
-        content="Sushant Rana - Salesforce Developer & Admin building intelligent CRM solutions and AI-powered automations for enterprise workflows.">
-    <link rel="canonical" href="https://imsushant2005.github.io/imsushant/index.html" />
+        content="Anubhav Rohilla - AI/ML Engineer with strong full-stack expertise across machine learning production (NLP/MLOps), Flutter mobile development, and Salesforce CRM integration.">
+    <link rel="canonical" href="https://anubhav-rohilla.github.io/index.html" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/extra.css" rel="stylesheet">
     <link href="assets/css/chatbot.css" rel="stylesheet">
+    <!-- Advanced Feature Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
 
@@ -34,7 +40,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#" data-aos="fade-right">Sushant Rana</a>
+            <a class="navbar-brand" href="#" data-aos="fade-right">Anubhav Rohilla</a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i data-feather="menu" style="color: #64ffda;"></i>
             </button>
@@ -45,6 +51,11 @@
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+                            <i data-feather="sun"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -55,11 +66,11 @@
         <div class="container hero-content">
             <div class="row align-items-center">
                 <div class="col-lg-7 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="800">
-                    <span class="hero-tagline">Salesforce Developer | Admin | AI & CRM Specialist</span>
+                    <span class="hero-tagline">AI/ML Engineer | Data Scientist | Software Engineer</span>
 
                     <h1 class="hero-title">
-                        Building <span class="highlight">Intelligent CRM</span><br>
-                        & Automation Solutions
+                        Building <span class="highlight">Artificial Intelligence</span><br>
+                        & Intelligent Systems
                     </h1>
 
                     <div class="typewriter-container">
@@ -67,13 +78,13 @@
                     </div>
 
                     <p class="hero-subtitle">
-                        I build scalable Salesforce applications and AI-powered automations that reduce manual work,
-                        improve sales efficiency, and solve real business problems.
+                        I build scalable, production-ready AI solutions and robust backend APIs, bridging the gap
+                        between machine learning models and real-world applications.
                     </p>
 
                     <div class="hero-credibility">
                         <i data-feather="award" style="width: 16px; height: 16px; margin-right: 8px;"></i>
-                        Mentored by a <strong>Salesforce Architect (12+ years industry experience)</strong>
+                        AI/ML Engineer @ <strong>Techventive IT Solutions</strong>
                     </div>
 
                     <div class="d-flex flex-column flex-sm-row gap-3">
@@ -89,9 +100,11 @@
 
                 <div class="col-lg-5 order-1 order-lg-2 text-center mb-5 mb-lg-0" data-aos="fade-left"
                     data-aos-duration="800" data-aos-delay="100">
-                    <div class="profile-container">
+                    <div class="profile-container"
+                        style="display: flex; align-items: center; justify-content: center; min-height: 300px;">
                         <div class="profile-glow"></div>
-                        <img src="images/myphoto.jpg" alt="Sushant Rana - Salesforce Developer" class="profile-img">
+                        <i data-feather="cpu"
+                            style="width: 120px; height: 120px; color: var(--accent); position: relative; z-index: 2;"></i>
                     </div>
                 </div>
             </div>
@@ -109,52 +122,100 @@
             <h2 class="section-title" data-aos="fade-up">Core Expertise</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies & Skills I Work With</p>
 
+            <div id="skills-graph-container" class="skills-graph-container" data-aos="zoom-in">
+                <!-- 3D Graph will render here -->
+                <div class="graph-overlay">
+                    <span>Interactive 3D Skill Connectivity Map</span>
+                </div>
+            </div>
+
             <div class="row" data-aos="fade-up" data-aos-delay="200">
-                <!-- Salesforce Skills - FIRST -->
+                <!-- AI/ML & NLP - FIRST -->
                 <div class="col-lg-4 mb-4">
                     <div class="skills-category">
-                        <h4 class="skills-category-title">Salesforce Ecosystem</h4>
+                        <h4 class="skills-category-title">AI/ML & NLP</h4>
                         <div>
-                            <span class="skill-tag primary">Salesforce Admin</span>
-                            <span class="skill-tag primary">Apex Development</span>
-                            <span class="skill-tag primary">Lightning Web Components</span>
-                            <span class="skill-tag primary">Flows & Automation</span>
-                            <span class="skill-tag primary">Security Model</span>
-                            <span class="skill-tag primary">REST API Integration</span>
-                            <span class="skill-tag primary">Agentforce</span>
+                            <span class="skill-tag primary">TensorFlow</span>
+                            <span class="skill-tag primary">PyTorch</span>
+                            <span class="skill-tag primary">Scikit-learn</span>
+                            <span class="skill-tag primary">Transformers</span>
+                            <span class="skill-tag primary">LangChain</span>
+                            <span class="skill-tag primary">LLMs</span>
+                            <span class="skill-tag primary">OpenAI APIs</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- AI & Automation Skills - SECOND -->
+                <!-- Programming & Backend - SECOND -->
                 <div class="col-lg-4 mb-4">
                     <div class="skills-category">
-                        <h4 class="skills-category-title">AI & Automation</h4>
+                        <h4 class="skills-category-title">Backend & Data</h4>
                         <div>
-                            <span class="skill-tag">AI Agents</span>
-                            <span class="skill-tag">LLM Integration</span>
-                            <span class="skill-tag">Intelligent Workflows</span>
                             <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Computer Vision</span>
-                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Flask / Django</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">SQL / PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Pandas / NumPy</span>
+                            <span class="skill-tag">Vector DBs</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product & Full-Stack - THIRD -->
+                <!-- DevOps & Mobile - THIRD -->
                 <div class="col-lg-4 mb-4">
                     <div class="skills-category">
-                        <h4 class="skills-category-title">Product & Development</h4>
+                        <h4 class="skills-category-title">DevOps & Mobile</h4>
                         <div>
-                            <span class="skill-tag">System Design</span>
-                            <span class="skill-tag">API Development</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Azure / AWS</span>
+                            <span class="skill-tag">MLOps</span>
                             <span class="skill-tag">Flutter / Dart</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">SQL / NoSQL</span>
-                            <span class="skill-tag">Git & Docker</span>
+                            <span class="skill-tag">Salesforce</span>
+                            <span class="skill-tag">REST APIs</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive AI Lab Demo Section -->
+    <section class="py-5" style="background: var(--primary);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">The Interactive Lab</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">See AI in action right now</p>
+
+            <div class="row g-4 justify-content-center">
+                <!-- NLP Demo -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="lab-card h-100">
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;"><i data-feather="message-square"
+                                style="margin-right: 10px;"></i>NLP Entity Recognition</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Type a bio to see how AI extracts meaning.
+                        </p>
+                        <input type="text" id="ner-input" class="ner-demo-input"
+                            placeholder="e.g. Anubhav works with Python in Azure...">
+                        <button id="ner-btn" class="btn btn-cyber w-100 mb-3">Extract Entities</button>
+                        <div id="ner-result" class="ner-result">Waiting for input...</div>
+                    </div>
+                </div>
+
+                <!-- Vision Demo -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="lab-card h-100">
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;"><i data-feather="eye"
+                                style="margin-right: 10px;"></i>Real-Time Object Detection</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Run COCO-SSD models directly in your browser.
+                        </p>
+                        <div class="vision-container">
+                            <video id="webcam" autoplay muted playsinline></video>
+                            <canvas id="vision-canvas"></canvas>
+                        </div>
+                        <button id="vision-btn" class="btn btn-outline-cyber w-100 mt-3">Activate Vision</button>
                     </div>
                 </div>
             </div>
@@ -196,9 +257,9 @@
                         <div class="why-hire-icon">
                             <i data-feather="cpu"></i>
                         </div>
-                        <h5 class="why-hire-title">Salesforce + AI Hybrid</h5>
-                        <p class="why-hire-text">A rare combination. I build CRM solutions enhanced with AI agents and
-                            intelligent automation capabilities.</p>
+                        <h5 class="why-hire-title">AI + Full-Stack Hybrid</h5>
+                        <p class="why-hire-text">A rare combination of machine learning expertise (NLP/MLOps) and robust
+                            full-stack development skills (Flutter/Flask/Salesforce).</p>
                     </div>
                 </div>
 
@@ -229,8 +290,8 @@
                             <i data-feather="award"></i>
                         </div>
                         <div class="cert-info">
-                            <h5>Salesforce Certified Agentforce Specialist</h5>
-                            <p>Official Salesforce Certification</p>
+                            <h5>Azure AI Engineer Associate</h5>
+                            <p>Microsoft Certification</p>
                         </div>
                     </div>
                 </div>
@@ -241,9 +302,44 @@
                             <i data-feather="briefcase"></i>
                         </div>
                         <div class="cert-info">
-                            <h5>Junior Software Engineer Intern</h5>
-                            <p>Hands-on with enterprise CRM workflows & production systems</p>
+                            <h5>Junior Software Engineer</h5>
+                            <p>Techventive IT Solutions Pvt. Ltd.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Storytelling Dashboard -->
+    <section class="py-5" style="background: var(--primary);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Performance Metrics</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Measuring impact with data</p>
+
+            <div class="row g-4">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="lab-card">
+                        <canvas id="metricsChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="glass-panel p-4">
+                        <h5 class="text-accent mb-3">Model Benchmarks</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex justify-content-between">
+                                <span class="text-secondary">Latency (NLP)</span>
+                                <span class="text-light">~45ms</span>
+                            </li>
+                            <li class="mb-3 d-flex justify-content-between">
+                                <span class="text-secondary">Precision</span>
+                                <span class="text-light">94.2%</span>
+                            </li>
+                            <li class="mb-3 d-flex justify-content-between">
+                                <span class="text-secondary">Recall</span>
+                                <span class="text-light">91.8%</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -264,20 +360,21 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-card">
-                        <img src="assets/images/banner.jpeg" class="project-image" alt="Langua Link Project">
+                        <img src="assets/images/resume_parser.jpg" class="project-image" alt="AI Resume Parser">
                         <div class="project-content">
-                            <span class="project-problem">Communication Barrier</span>
-                            <h5 class="project-title">Langua Link</h5>
+                            <span class="project-problem">Recruitment Automation</span>
+                            <h5 class="project-title">AI-Powered Resume Parser</h5>
                             <p class="project-description">
-                                Real-time communication platform with voice cloning and multi-language translation for
-                                global team collaboration.
+                                Automated extraction engine using SpaCy and Regex, achieving 92% precision in NER for
+                                complex document structures.
                             </p>
                             <div class="project-tech">
-                                <span>AI/ML</span>
-                                <span>Voice Cloning</span>
-                                <span>Translation API</span>
+                                <span>SpaCy</span>
+                                <span>Regex</span>
+                                <span>Python</span>
+                                <span>NLP</span>
                             </div>
-                            <a href="projects.html#project3Modal" class="project-btn">
+                            <a href="projects.html" class="project-btn">
                                 <i data-feather="arrow-right" class="me-1" style="width: 14px; height: 14px;"></i>View
                                 Details
                             </a>
@@ -287,20 +384,18 @@
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-card">
-                        <video class="project-image" controls>
-                            <source src="assets/fightcam.mp4" type="video/mp4">
-                        </video>
+                        <img src="assets/images/voice_cloning.jpg" class="project-image" alt="Voice Cloning AI">
                         <div class="project-content">
-                            <span class="project-problem">Security Monitoring</span>
-                            <h5 class="project-title">FightCam AI</h5>
+                            <span class="project-problem">Digital Synthesis</span>
+                            <h5 class="project-title">Real-Time Voice Cloning</h5>
                             <p class="project-description">
-                                Real-time action detection system using computer vision to identify and alert on
-                                physical altercations.
+                                Low-latency voice synthesis pipeline with multi-modal emotion recognition to dynamically
+                                modulate voice tone.
                             </p>
                             <div class="project-tech">
-                                <span>OpenCV</span>
-                                <span>MediaPipe</span>
-                                <span>Python</span>
+                                <span>PyTorch</span>
+                                <span>TTS</span>
+                                <span>Emotion AI</span>
                             </div>
                             <a href="projects.html" class="project-btn">
                                 <i data-feather="arrow-right" class="me-1" style="width: 14px; height: 14px;"></i>View
@@ -312,18 +407,18 @@
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="project-card">
-                        <img src="assets/image.png" class="project-image" alt="Vision Recognition Project">
+                        <img src="assets/images/forecasting.jpg" class="project-image" alt="Demand Forecasting">
                         <div class="project-content">
-                            <span class="project-problem">Manual Classification</span>
-                            <h5 class="project-title">Vision Recognition Engine</h5>
+                            <span class="project-problem">Inventory Optimization</span>
+                            <h5 class="project-title">Demand Forecasting</h5>
                             <p class="project-description">
-                                Deep learning model for automated image classification, reducing manual review time
-                                significantly.
+                                Multi-model forecasting system using ARIMA, Prophet, and XGBoost to predict trends for
+                                high-demand retail SKUs.
                             </p>
                             <div class="project-tech">
-                                <span>TensorFlow</span>
-                                <span>Deep Learning</span>
-                                <span>CNN</span>
+                                <span>XGBoost</span>
+                                <span>ARIMA</span>
+                                <span>Prophet</span>
                             </div>
                             <a href="projects.html" class="project-btn">
                                 <i data-feather="arrow-right" class="me-1" style="width: 14px; height: 14px;"></i>View
@@ -342,17 +437,129 @@
         </div>
     </section>
 
+    </section>
+
+    <!-- MLOps Strategy Section -->
+    <section class="py-5" style="background: var(--secondary); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Production ML Strategy</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Scaling models from notebook to
+                production</p>
+
+            <div class="mlops-viz" data-aos="fade-up">
+                <div class="mlops-pipeline">
+                    <div class="pipeline-step">
+                        <i data-feather="database"></i>
+                        <h5>Data Ingestion</h5>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Validated at 98% integrity</p>
+                    </div>
+                    <div class="pipeline-arrow"><i data-feather="chevrons-right"></i></div>
+                    <div class="pipeline-step">
+                        <i data-feather="cpu"></i>
+                        <h5>Model Training</h5>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">PyTorch/TensorFlow</p>
+                    </div>
+                    <div class="pipeline-arrow"><i data-feather="chevrons-right"></i></div>
+                    <div class="pipeline-step">
+                        <i data-feather="package"></i>
+                        <h5>Containerization</h5>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Docker & Artifacts</p>
+                    </div>
+                    <div class="pipeline-arrow"><i data-feather="chevrons-right"></i></div>
+                    <div class="pipeline-step">
+                        <i data-feather="activity"></i>
+                        <h5>Monitoring</h5>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Drift & Performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kaggle & Achievement Integration -->
+            <div class="row mt-5 g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="glass-panel p-4 h-100">
+                        <h4 style="color: var(--accent); margin-bottom: 1.5rem;"><i data-feather="trending-up"
+                                style="margin-right: 10px;"></i>Kaggle & Open Source</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <div style="font-size: 2rem; color: var(--light); font-weight: 700; margin-right: 1rem;">20+
+                            </div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">GitHub
+                                Repositories<br>Maintained & Active</div>
+                        </div>
+                        <p style="color: var(--text-secondary);">Focusing on NLP architecture, time-series forecasting,
+                            and scalable backend implementations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="glass-panel p-4 h-100">
+                        <h4 style="color: var(--accent); margin-bottom: 1.5rem;"><i data-feather="smile"
+                                style="margin-right: 10px;"></i>What People Say</h4>
+                        <div class="testimonial-card">
+                            <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">"Anubhav's
+                                ability to bridge the gap between complex ML models and production-ready APIs is
+                                exceptional. His focus on data integrity is top-tier."</p>
+                            <div class="d-flex align-items-center">
+                                <div
+                                    style="width: 40px; height: 40px; background: var(--accent-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem; color: var(--accent);">
+                                    AR</div>
+                                <div>
+                                    <h6 style="margin: 0; font-size: 0.9rem;">Lead Engineer</h6>
+                                    <p style="margin: 0; font-size: 0.75rem; color: var(--text-secondary);">Techventive
+                                        IT Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="py-5" style="background: var(--primary);">
         <div class="container py-4 text-center" data-aos="fade-up">
             <h3 style="color: var(--light); margin-bottom: 1rem;">Open to Opportunities</h3>
             <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem;">
-                Actively seeking Salesforce Developer / Admin / Consultant roles (WFH or Hybrid).
+                Actively seeking AI/ML Engineer / Data Scientist / Software Engineer roles.
                 Let's discuss how I can contribute to your team.
             </p>
             <a href="contact.html" class="btn btn-cyber">
                 <i data-feather="mail" class="me-2" style="width: 18px; height: 18px;"></i>Get In Touch
             </a>
+        </div>
+    </section>
+
+    <!-- GitHub Activity Section -->
+    <section class="py-5" style="background: var(--primary);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">GitHub activity</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Live code-base contributions</p>
+
+            <div class="github-stats-container" data-aos="zoom-in">
+                <img src="https://github-readme-stats.vercel.app/api?username=Anubhav-Rohilla&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a192f&title_color=64ffda&text_color=8892b0&icon_color=64ffda"
+                    alt="GitHub Stats">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Anubhav-Rohilla&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a192f&title_color=64ffda&text_color=8892b0"
+                    alt="Top Languages">
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Game Section -->
+    <section class="py-5" style="background: var(--secondary); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Neural Defender</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Catch the Clean Data (1) and avoid the
+                Bad Data (0)!</p>
+
+            <div id="game-container" data-aos="flip-up">
+                <div class="score-board" id="score">Accuracy: 0%</div>
+                <div class="game-overlay" id="game-overlay">
+                    <h3 style="color: var(--accent);">Ready to Train?</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Help Anubhav clean the dataset for his
+                        next SOTA model.</p>
+                    <button id="start-game" class="btn btn-cyber">Initiate Training</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -362,19 +569,18 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <p class="mb-0" style="color: var(--text-secondary);">
-                        © 2025 Sushant Rana. Building solutions that matter.
+                        © 2026 Anubhav Rohilla. Building solutions that matter.
                     </p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="social-links">
-                        <a href="https://github.com/imSushant2005" target="_blank" aria-label="GitHub Profile">
+                        <a href="https://github.com/Anubhav-Rohilla" target="_blank" aria-label="GitHub Profile">
                             <i data-feather="github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/sushantrana05/" target="_blank"
-                            aria-label="LinkedIn Profile">
+                        <a href="https://linkedin.com/in/anubhav-rohilla" target="_blank" aria-label="LinkedIn Profile">
                             <i data-feather="linkedin"></i>
                         </a>
-                        <a href="mailto:sushantrana2005@gmail.com" aria-label="Email Sushant Rana">
+                        <a href="mailto:kushrohilla10@gmail.com" aria-label="Email Anubhav Rohilla">
                             <i data-feather="mail"></i>
                         </a>
                     </div>
@@ -382,6 +588,25 @@
             </div>
         </div>
     </footer>
+
+    <!-- Engineer's Terminal -->
+    <div id="terminal-toggle" class="terminal-toggle" title="Open Engineering Console">
+        <i data-feather="terminal"></i>
+    </div>
+
+    <div id="terminal-container" class="terminal-container">
+        <div class="terminal-header">
+            <span>Anubhav_Terminal v1.0.4</span>
+            <button id="terminal-close">&times;</button>
+        </div>
+        <div id="terminal-body" class="terminal-body">
+            <div class="terminal-line">Welcome to the Secure Port Entry. Type 'help' for commands.</div>
+        </div>
+        <div class="terminal-input-area">
+            <span class="prompt">guest@anubhav:~$</span>
+            <input type="text" id="terminal-input" autofocus>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -414,10 +639,11 @@
 
         // Typewriter Effect
         const typewriterTexts = [
-            "Salesforce Developer",
-            "CRM Architect",
-            "AI Automation Specialist",
-            "Business Solutions Builder"
+            "AI/ML Engineer",
+            "Data Scientist",
+            "Software Engineer",
+            "NLP Specialist",
+            "MLOps Expert"
         ];
 
         let twIndex = 0;
@@ -453,6 +679,7 @@
         typeWriter();
     </script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/features.js"></script>
     <script src="assets/js/chatbot.js"></script>
 </body>
 

@@ -13,14 +13,14 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: var(--accent, #64ffda);
+    background: var(--accent);
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(100, 255, 218, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px var(--accent-glow);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .chatbot-toggle:hover {
@@ -49,13 +49,14 @@
     right: 0;
     width: 350px;
     max-height: 500px;
-    background: #112240;
-    border: 1px solid rgba(100, 255, 218, 0.2);
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    background: var(--primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
     display: none;
     flex-direction: column;
     overflow: hidden;
+    backdrop-filter: blur(20px);
 }
 
 .chatbot-window.active {
@@ -77,9 +78,9 @@
 
 /* Chat Header */
 .chatbot-header {
-    background: #0a192f;
+    background: var(--secondary);
     padding: 15px 20px;
-    border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+    border-bottom: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
     gap: 12px;

@@ -1,35 +1,35 @@
-# Sushant Rana | Salesforce Developer Portfolio
+# Anubhav Rohilla | AI/ML Engineer Portfolio
 
-**Salesforce Developer | Admin | AI & CRM Solutions**
+**AI/ML Engineer | Data Scientist | Software Engineer**
 
-Building intelligent CRM solutions and AI-powered business automation.
+Building scalable, production-ready AI solutions and robust backend systems.
 
-🔗 **[View Live Portfolio](https://imsushant2005.github.io/imsushant/)**
+🔗 **[View Live Portfolio](https://anubhav-rohilla.github.io/)**
 
 ---
 
 ## About Me
 
-I'm **Sushant Rana**, a Salesforce Developer and Certified Agentforce Specialist focused on:
+I'm **Anubhav Rohilla**, an AI/ML Engineer and Certified Azure AI Engineer Associate focused on:
 
-- ☁️ **Salesforce Development** — Apex, LWC, Flows, Security Model, API Integrations
-- 🤖 **AI & Automation** — LLM-powered workflows, intelligent decision systems
-- 🛠️ **Product Development** — Full-stack apps, system design, API development
+- 🤖 **AI/ML & NLP** — TensorFlow, PyTorch, Transformers, LLMs, LangChain
+- 📊 **Data Science & Forecasting** — Time-series analysis, Predictive modeling, Scikit-learn
+- 🛠️ **System Architecture** — Python, Flask/Django, Docker, MLOps, CI/CD
 
-**Mentored by a Salesforce Architect with 12+ years of industry experience.**
+**Experienced in bridging the gap between complex machine learning models and real-world production benefits.**
 
 ---
 
 ## Tech Stack
 
-### Salesforce Ecosystem
-`Salesforce Admin` `Apex` `LWC` `Flows` `Security Model` `REST API` `Agentforce`
+### AI & Machine Learning
+`TensorFlow` `PyTorch` `Scikit-learn` `Transformers` `LangChain` `LLMs` `NLP` `Computer Vision`
 
-### AI & Automation
-`Python` `LLM Integration` `OpenCV` `TensorFlow` `NLP` `AI Agents`
+### Programming & Backend
+`Python` `Flask` `Django` `Node.js` `C++` `Java` `SQL` `REST APIs`
 
-### Product & Development
-`FastAPI` `React` `Flutter` `SQL/NoSQL` `Git` `Docker`
+### DevOps & Tools
+`Docker` `MLOps` `CI/CD` `Azure` `AWS` `Git`
 
 ---
 
@@ -37,35 +37,36 @@ I'm **Sushant Rana**, a Salesforce Developer and Certified Agentforce Specialist
 
 | Project | Problem Solved | Tech Stack |
 |---------|---------------|------------|
-| **Langua Link** | Language barriers in global teams | FastAPI, RVC, React, WebSockets |
-| **AI Support Chatbot** | High support ticket volume | Transformers, HuggingFace, FastAPI |
+| **AI Resume Parser** | Manual resume filtering efficiency | SpaCy, Regex, Python, NLP |
+| **Real-Time Voice Cloning** | Authentic digital voice synthesis | PyTorch, TTS, Emotion AI |
+| **Demand Forecasting** | Inventory & resource optimization | XGBoost, ARIMA, Prophet |
 | **FightCam AI** | Manual security monitoring | OpenCV, MediaPipe, Python |
-| **Medical Diagnosis Assistant** | Preliminary diagnosis efficiency | Scikit-learn, XGBoost, Flask |
 
 ---
 
 ## Certifications
 
-- ✅ **Salesforce Certified Agentforce Specialist**
+- ✅ **Microsoft Certified: Azure AI Engineer Associate**
 
 ---
 
 ## Experience
 
-- **Junior Software Engineer** — Enterprise CRM workflows and production systems
-- **Salesforce Architecture Mentorship** — Remote training under 12+ years industry expert
+- **Junior Software Engineer** — Techventive IT Solutions (AI features & Backend APIs)
+- **AI Data Analyst Intern** — Excelerate (Data standardization & Predictive modeling)
+- **Data Science Intern** — YBI Foundation (Forecasting pipelines)
 
 ---
 
 ## Connect
 
-- 📧 **Email:** [sushantrana2005@gmail.com](mailto:sushantrana2005@gmail.com)
-- 💼 **LinkedIn:** [linkedin.com/in/sushantrana05](https://www.linkedin.com/in/sushantrana05/)
-- 🐙 **GitHub:** [github.com/imSushant2005](https://github.com/imSushant2005)
+- 📧 **Email:** [kushrohilla10@gmail.com](mailto:kushrohilla10@gmail.com)
+- 💼 **LinkedIn:** [linkedin.com/in/anubhav-rohilla](https://linkedin.com/in/anubhav-rohilla)
+- 🐙 **GitHub:** [github.com/Anubhav-Rohilla](https://github.com/Anubhav-Rohilla)
 
 ---
 
-**Open to Salesforce Developer / Admin / Consultant roles (WFH or Hybrid)**
+**Open to AI/ML Engineer / Data Scientist / Software Developer roles**
 
 ---
 

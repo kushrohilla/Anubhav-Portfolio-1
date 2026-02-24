@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const typewriterElement = document.getElementById('typewriter');
     if (typewriterElement) {
         const phrases = [
-            "Salesforce Developer",
-            "CRM Architect",
-            "AI Automation Specialist",
-            "Business Solutions Builder"
+            "AI/ML Engineer",
+            "Data Scientist",
+            "Software Engineer",
+            "Intelligent Systems"
         ];
         let phraseIndex = 0;
         let charIndex = 0;
