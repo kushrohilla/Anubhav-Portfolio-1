@@ -1,0 +1,1277 @@
+/* =====================================================
+   RESPONSIVE.CSS — Mobile-First Responsive System
+   Breakpoints:
+     xs : 0 – 479px    (small phones: iPhone SE, Moto G)
+     sm : 480 – 767px  (large phones: iPhone Pro Max, Pixel)
+     md : 768 – 991px  (tablets: iPad mini, Android tablets)
+     lg : 992 – 1199px (small desktops, large tablets landscape)
+     xl : 1200px+      (full desktop)
+   ===================================================== */
+
+/* =====================================================
+   1. UNIVERSAL MOBILE BASE
+   ===================================================== */
+
+html {
+    /* Prevent iOS from auto-zooming on form inputs */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Minimum touch target: 44px (Apple HIG) */
+a,
+button,
+input,
+textarea,
+select,
+.nav-link,
+.btn,
+.btn-cyber,
+.btn-outline-cyber,
+.chatbot-toggle,
+.terminal-toggle,
+.theme-toggle,
+.quick-reply {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Override for inline-block elements that shouldn't stretch */
+a.project-btn,
+span.skill-tag,
+span.ner-tag {
+    min-height: unset;
+    display: inline-block;
+}
+
+/* Fix horizontal overflow everywhere */
+body,
+section,
+.container,
+.row {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* =====================================================
+   2. NAVIGATION — All Breakpoints
+   ===================================================== */
+
+/* --- xs: 0-479px --- */
+@media (max-width: 479px) {
+    .navbar {
+        padding: 0.65rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem !important;
+    }
+
+    .navbar-toggler {
+        padding: 0.35rem 0.5rem;
+        min-height: 40px;
+    }
+
+    /* Mobile nav menu full-width slide down */
+    .navbar-collapse {
+        background: rgba(2, 6, 23, 0.98);
+        border-top: 1px solid var(--border-color);
+        margin: 0 -12px;
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0.5rem !important;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 0.95rem !important;
+        justify-content: flex-start;
+    }
+
+    .navbar-nav .nav-item:last-child .nav-link,
+    .navbar-nav .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+        border-radius: 8px !important;
+    }
+}
+
+/* --- sm: 480-767px --- */
+@media (min-width: 480px) and (max-width: 767px) {
+    .navbar-brand {
+        font-size: 1.2rem !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(2, 6, 23, 0.97);
+        border-top: 1px solid var(--border-color);
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0.5rem !important;
+        border-bottom: 1px solid var(--border-color);
+        justify-content: flex-start;
+    }
+
+    .theme-toggle {
+        margin-top: 0.5rem;
+        width: 100%;
+        border-radius: 8px !important;
+    }
+}
+
+/* --- md: 768-991px --- */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand {
+        font-size: 1.3rem !important;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0 4px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(2, 6, 23, 0.97);
+        border-top: 1px solid var(--border-color);
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .navbar-nav .nav-link {
+        justify-content: flex-start;
+        padding: 0.65rem 0.5rem !important;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .theme-toggle {
+        margin-top: 0.5rem;
+        width: 100%;
+        border-radius: 8px !important;
+    }
+}
+
+/* =====================================================
+   3. HERO SECTION
+   ===================================================== */
+
+/* --- xs: 0-479px --- */
+@media (max-width: 479px) {
+    .hero {
+        min-height: 100svh;
+        padding-top: 70px;
+        padding-bottom: 3rem;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .hero-tagline {
+        font-size: 0.75rem !important;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .typewriter-container {
+        height: 40px;
+        justify-content: center;
+    }
+
+    .typewriter {
+        font-size: 0.95rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    .hero-credibility {
+        font-size: 0.8rem;
+        display: block;
+        text-align: center;
+        border-left: none;
+        border-top: 3px solid var(--accent);
+        border-radius: 4px;
+        padding: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 0.75rem !important;
+    }
+
+    .btn-cyber,
+    .btn-outline-cyber {
+        width: 100% !important;
+        padding: 12px 20px !important;
+        font-size: 0.9rem !important;
+        margin-bottom: 0 !important;
+        border-radius: 8px;
+    }
+
+    /* Profile icon area */
+    .profile-container {
+        min-height: 160px !important;
+    }
+
+    .profile-container > i[data-feather] {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .profile-img {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    /* Scroll indicator hidden on very small screens */
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* --- sm: 480-767px --- */
+@media (min-width: 480px) and (max-width: 767px) {
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 4rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.1rem !important;
+    }
+
+    .hero-credibility {
+        display: block;
+        text-align: center;
+    }
+
+    .profile-container {
+        min-height: 200px !important;
+    }
+
+    .profile-container > i[data-feather] {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .btn-cyber,
+    .btn-outline-cyber {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* --- md: 768-991px --- */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-title {
+        font-size: 2.4rem !important;
+    }
+
+    .profile-img {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-credibility {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+/* =====================================================
+   4. SECTION PADDING (Global)
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .py-5 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .py-4 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+
+    .section-title::before,
+    .section-title::after {
+        display: none;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .section-title {
+        font-size: 1.75rem !important;
+    }
+
+    .section-title::before,
+    .section-title::after {
+        display: none;
+    }
+}
+
+/* =====================================================
+   5. SKILLS SECTION — 3D Graph + Skill Tags
+   ===================================================== */
+
+/* --- xs --- */
+@media (max-width: 479px) {
+    .skills-graph-container {
+        height: 260px !important;
+        border-radius: 12px;
+        margin-bottom: 1.5rem !important;
+        cursor: default;
+    }
+
+    .graph-overlay span {
+        font-size: 0.65rem;
+    }
+
+    .skills-category {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .skills-category-title {
+        font-size: 1rem !important;
+    }
+
+    .skill-tag {
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+        margin: 3px !important;
+    }
+}
+
+/* --- sm --- */
+@media (min-width: 480px) and (max-width: 767px) {
+    .skills-graph-container {
+        height: 320px !important;
+    }
+}
+
+/* --- md --- */
+@media (min-width: 768px) and (max-width: 991px) {
+    .skills-graph-container {
+        height: 380px !important;
+    }
+}
+
+/* =====================================================
+   6. INTERACTIVE LAB (NLP + Vision Demo)
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .lab-card {
+        padding: 1.25rem !important;
+        border-radius: 12px !important;
+    }
+
+    .lab-card h4 {
+        font-size: 1rem !important;
+    }
+
+    .ner-demo-input {
+        font-size: 0.85rem;
+        padding: 0.75rem !important;
+    }
+
+    .ner-result {
+        min-height: 70px !important;
+        font-size: 0.85rem;
+        padding: 0.75rem !important;
+        line-height: 1.9 !important;
+    }
+
+    .vision-container {
+        aspect-ratio: 4/3;
+        border-radius: 8px !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .lab-card {
+        padding: 1.5rem !important;
+    }
+}
+
+/* =====================================================
+   7. WHY HIRE ME CARDS
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .why-hire-section {
+        padding: 2.5rem 0 !important;
+    }
+
+    .why-hire-card {
+        padding: 1.25rem !important;
+    }
+
+    .why-hire-title {
+        font-size: 1rem !important;
+    }
+
+    .why-hire-text {
+        font-size: 0.85rem !important;
+    }
+
+    .why-hire-icon {
+        width: 42px !important;
+        height: 42px !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .why-hire-card {
+        padding: 1.5rem !important;
+    }
+}
+
+/* =====================================================
+   8. CERTIFICATIONS / CREDENTIALS
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .cert-badge {
+        padding: 1rem !important;
+        gap: 0.75rem !important;
+    }
+
+    .cert-icon {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px;
+    }
+
+    .cert-info h5 {
+        font-size: 0.9rem !important;
+    }
+
+    .cert-info p {
+        font-size: 0.78rem !important;
+    }
+}
+
+/* =====================================================
+   9. PERFORMANCE METRICS CHART
+   ===================================================== */
+
+@media (max-width: 479px) {
+    #metricsChart {
+        max-height: 220px;
+    }
+
+    .glass-panel {
+        padding: 1rem !important;
+    }
+
+    .glass-panel h5 {
+        font-size: 0.95rem;
+    }
+
+    .glass-panel li {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #metricsChart {
+        max-height: 260px;
+    }
+}
+
+/* =====================================================
+   10. PROJECT CARDS
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .project-card {
+        border-radius: 12px !important;
+    }
+
+    .project-image {
+        height: 170px !important;
+    }
+
+    .project-content {
+        padding: 1rem !important;
+    }
+
+    .project-title {
+        font-size: 1.1rem !important;
+    }
+
+    .project-description {
+        font-size: 0.85rem !important;
+    }
+
+    .project-tech span {
+        font-size: 0.7rem !important;
+        padding: 3px 8px !important;
+    }
+
+    .project-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 16px !important;
+    }
+
+    /* Disable hover lift on mobile (no hover on touch) */
+    .project-card:hover {
+        transform: none !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .project-image {
+        height: 185px !important;
+    }
+}
+
+/* Bootstrap Modals — Mobile Friendly */
+@media (max-width: 767px) {
+    .modal-dialog {
+        margin: 0.5rem !important;
+    }
+
+    .modal-body {
+        padding: 1rem !important;
+    }
+
+    .modal-header,
+    .modal-footer {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+    }
+}
+
+/* =====================================================
+   11. MLOps PIPELINE VISUALIZATION
+   ===================================================== */
+
+@media (max-width: 767px) {
+    .mlops-viz {
+        padding: 1rem !important;
+    }
+
+    .mlops-pipeline {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    .pipeline-step {
+        width: 100% !important;
+        min-width: unset !important;
+        padding: 1rem !important;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-align: left !important;
+    }
+
+    .pipeline-step i {
+        font-size: 1.5rem !important;
+        margin-bottom: 0 !important;
+        min-width: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .pipeline-step h5 {
+        font-size: 0.95rem;
+        margin: 0 0 0.2rem 0;
+    }
+
+    .pipeline-step p {
+        margin: 0;
+    }
+
+    /* Arrow becomes a down arrow on mobile */
+    .pipeline-arrow {
+        transform: rotate(90deg);
+        font-size: 1.2rem !important;
+    }
+
+    @keyframes flow {
+        0%   { transform: rotate(90deg) translateX(-5px); opacity: 0.2; }
+        50%  { transform: rotate(90deg) translateX(5px);  opacity: 1;   }
+        100% { transform: rotate(90deg) translateX(-5px); opacity: 0.2; }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .mlops-pipeline {
+        flex-wrap: wrap;
+        gap: 1rem !important;
+    }
+
+    .pipeline-step {
+        min-width: 120px !important;
+        padding: 1rem !important;
+    }
+
+    .pipeline-arrow {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* =====================================================
+   12. KAGGLE / ACHIEVEMENT + TESTIMONIAL
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .glass-panel.p-4 {
+        padding: 1.25rem !important;
+    }
+
+    .testimonial-card {
+        padding: 0;
+    }
+}
+
+/* =====================================================
+   13. GITHUB STATS SECTION
+   ===================================================== */
+
+@media (max-width: 767px) {
+    .github-stats-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0.75rem !important;
+        gap: 0.75rem !important;
+    }
+
+    .github-stats-container img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .github-stats-container img {
+        width: 45% !important;
+    }
+}
+
+/* =====================================================
+   14. INTERACTIVE GAME (Neural Defender)
+   ===================================================== */
+
+@media (max-width: 479px) {
+    #game-container {
+        height: 280px !important;
+        border-radius: 12px !important;
+        cursor: default;
+    }
+
+    .score-board {
+        font-size: 0.9rem !important;
+    }
+
+    .game-overlay h3 {
+        font-size: 1.1rem;
+    }
+
+    .game-overlay p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem !important;
+    }
+
+    .game-player {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .falling-data {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #game-container {
+        height: 320px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #game-container {
+        height: 360px !important;
+    }
+}
+
+/* =====================================================
+   15. ENGINEERING TERMINAL
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .terminal-toggle {
+        width: 50px !important;
+        height: 50px !important;
+        bottom: 90px !important;
+        right: 12px !important;
+    }
+
+    .terminal-container {
+        width: calc(100vw - 24px) !important;
+        height: 55vh !important;
+        bottom: 155px !important;
+        right: 12px !important;
+        left: 12px;
+        border-radius: 10px !important;
+    }
+
+    .terminal-header {
+        padding: 8px 12px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .terminal-body {
+        font-size: 0.75rem !important;
+        padding: 10px !important;
+    }
+
+    .terminal-input-area {
+        padding: 8px 10px !important;
+    }
+
+    #terminal-input {
+        font-size: 0.8rem !important;
+    }
+
+    .prompt {
+        font-size: 0.75rem !important;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .terminal-toggle {
+        bottom: 90px !important;
+        right: 16px !important;
+    }
+
+    .terminal-container {
+        width: calc(100vw - 32px) !important;
+        height: 58vh !important;
+        bottom: 160px !important;
+        right: 16px !important;
+    }
+}
+
+/* =====================================================
+   16. CHATBOT WIDGET
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .chatbot-container {
+        bottom: 12px !important;
+        right: 12px !important;
+    }
+
+    .chatbot-toggle {
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .chatbot-window {
+        width: calc(100vw - 24px) !important;
+        right: -6px !important;
+        max-height: 75vh !important;
+        border-radius: 14px !important;
+    }
+
+    .chatbot-header {
+        padding: 12px 14px !important;
+    }
+
+    .chatbot-messages {
+        max-height: 260px !important;
+        padding: 10px !important;
+    }
+
+    .chat-message {
+        font-size: 0.82rem !important;
+        padding: 8px 11px !important;
+    }
+
+    .quick-replies {
+        padding: 8px 10px !important;
+        gap: 5px !important;
+    }
+
+    .quick-reply {
+        font-size: 0.72rem !important;
+        padding: 5px 10px !important;
+    }
+
+    .chatbot-input {
+        padding: 8px 10px !important;
+    }
+
+    .chatbot-input input {
+        font-size: 0.82rem !important;
+        padding: 8px 10px !important;
+    }
+
+    .chatbot-input button {
+        width: 38px !important;
+        height: 38px !important;
+        min-height: 38px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .chatbot-container {
+        bottom: 14px;
+        right: 14px;
+    }
+
+    .chatbot-window {
+        width: calc(100vw - 28px) !important;
+        right: -7px !important;
+        max-height: 72vh !important;
+    }
+}
+
+/* =====================================================
+   17. CONTACT PAGE
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .contact-hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .form-control {
+        font-size: 16px !important; /* Prevents iOS zoom on input focus */
+        padding: 10px 14px !important;
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+    }
+
+    #submitBtn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .form-control {
+        font-size: 16px !important;
+    }
+}
+
+/* =====================================================
+   18. RESUME PAGE
+   ===================================================== */
+
+@media (max-width: 479px) {
+    /* Resume download area */
+    iframe {
+        height: 420px !important;
+    }
+
+    /* Ensure resume button is full-width */
+    a[download] {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   19. FOOTER
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .footer {
+        padding: 1.75rem 0 !important;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 0.8rem !important;
+    }
+
+    .social-links {
+        margin-top: 0.75rem;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .social-links a {
+        margin: 0 6px !important;
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .footer {
+        padding: 2rem 0 !important;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* =====================================================
+   20. ABOUT PAGE
+   ===================================================== */
+
+@media (max-width: 479px) {
+    /* About hero section */
+    section[style*="margin-top: 80px"] {
+        margin-top: 70px !important;
+    }
+
+    /* Headings */
+    h1[style*="2.5rem"] {
+        font-size: 1.8rem !important;
+    }
+
+    h1[style*="2.8rem"] {
+        font-size: 1.9rem !important;
+    }
+
+    /* Experience cards */
+    .glass-panel {
+        padding: 1.25rem !important;
+        border-radius: 8px;
+    }
+
+    /* Cert / journey panels */
+    .glass-panel .d-flex {
+        gap: 0.75rem !important;
+    }
+
+    .glass-panel .d-flex > div[style*="50px"] {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px;
+    }
+
+    /* Timeline */
+    .row .col-md-6 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    h1[style*="2.5rem"] {
+        font-size: 2rem !important;
+    }
+
+    h1[style*="2.8rem"] {
+        font-size: 2.1rem !important;
+    }
+}
+
+/* =====================================================
+   21. PROJECTS PAGE — Hero + Grid
+   ===================================================== */
+
+@media (max-width: 479px) {
+    h1[style*="2.8rem"] {
+        font-size: 1.9rem !important;
+        line-height: 1.2;
+    }
+
+    /* Snake Fusion carousel in modal */
+    .carousel-item img {
+        border-radius: 8px;
+    }
+}
+
+/* =====================================================
+   22. LOADING SCREEN
+   ===================================================== */
+
+@media (max-width: 479px) {
+    .loader {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* =====================================================
+   23. AVAILABILITY BADGE (Contact page)
+   ===================================================== */
+
+@media (max-width: 767px) {
+    .glass-panel.d-inline-block {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .glass-panel.d-inline-block p {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   24. SOCIAL ICON BUTTONS (Contact page Find Me Online)
+   ===================================================== */
+
+@media (max-width: 479px) {
+    div[style*="display: flex; gap: 1rem"] {
+        gap: 0.75rem !important;
+    }
+
+    a[style*="width: 50px"] {
+        width: 44px !important;
+        height: 44px !important;
+    }
+}
+
+/* =====================================================
+   25. CONTACT INFO CARDS (Email / Phone / Location)
+   ===================================================== */
+
+@media (max-width: 479px) {
+    div[style*="align-items: center; padding: 1rem; background: var(--accent-soft)"] {
+        padding: 0.75rem !important;
+    }
+
+    div[style*="width: 45px"] {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px;
+    }
+}
+
+/* =====================================================
+   26. BUTTONS — Global Touch UX
+   ===================================================== */
+
+@media (max-width: 767px) {
+    /* Prevent hover styles sticking after tap on mobile */
+    .btn-cyber:hover,
+    .btn-outline-cyber:hover,
+    .project-btn:hover,
+    .why-hire-card:hover,
+    .cert-badge:hover,
+    .skill-tag:hover {
+        transform: none !important;
+    }
+
+    /* Make sure buttons don't overflow */
+    .d-flex.flex-column.flex-sm-row {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .d-flex.flex-column.flex-sm-row .btn,
+    .d-flex.flex-column.flex-sm-row a.btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =====================================================
+   27. SECTION SPECIFIC FIXES FOR TABLET
+   ===================================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Why hire me — 2 cols on tablet */
+    .why-hire-section .col-md-6.col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* MLOps Achievement panels */
+    .col-md-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* =====================================================
+   28. SAFE AREA — iPhone X+ Notch / Home Indicator
+   ===================================================== */
+
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+
+    .navbar {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+    }
+
+    .footer {
+        padding-bottom: max(1.75rem, env(safe-area-inset-bottom));
+    }
+
+    .chatbot-container {
+        bottom: max(12px, env(safe-area-inset-bottom));
+        right: max(12px, env(safe-area-inset-right));
+    }
+
+    .terminal-toggle {
+        right: max(16px, env(safe-area-inset-right));
+        bottom: max(100px, calc(env(safe-area-inset-bottom) + 80px));
+    }
+}
+
+/* =====================================================
+   29. PORTRAIT vs LANDSCAPE ORIENTATION
+   ===================================================== */
+
+/* Landscape on phones — short screens, reduce hero height */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: unset !important;
+        padding-top: 75px;
+        padding-bottom: 2rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .skills-graph-container {
+        height: 200px !important;
+    }
+
+    #game-container {
+        height: 220px !important;
+    }
+
+    .terminal-container {
+        height: 65vh !important;
+        bottom: 100px !important;
+    }
+}
+
+/* =====================================================
+   30. HIGH-DPI / RETINA DISPLAY OPTIMIZATIONS
+   ===================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    /* Ensure crisp borders */
+    .navbar,
+    .glass-panel,
+    .project-card,
+    .lab-card {
+        border-width: 0.5px;
+    }
+}
+
+/* =====================================================
+   31. PRINT MEDIA
+   ===================================================== */
+
+@media print {
+    .navbar,
+    .footer,
+    .chatbot-container,
+    .terminal-toggle,
+    .terminal-container,
+    .loading-overlay,
+    .scroll-indicator,
+    #game-container,
+    .skills-graph-container {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}

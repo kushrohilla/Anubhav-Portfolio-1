@@ -753,6 +753,8 @@ a:hover {
 
 /* =====================================================
    RESPONSIVE DESIGN
+   Comprehensive responsive rules are in responsive.css
+   The rules below handle residual legacy layout needs
    ===================================================== */
 
 @media (max-width: 991px) {
@@ -784,14 +786,6 @@ a:hover {
         font-size: 2rem;
     }
 
-    .btn-cyber,
-    .btn-outline-cyber {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
     .section-title::before,
     .section-title::after {
         display: none;
@@ -799,6 +793,12 @@ a:hover {
 
     .projects-section {
         padding: 3rem 0;
+    }
+
+    /* Resume page: contact info wraps neatly */
+    .resume-contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
 
