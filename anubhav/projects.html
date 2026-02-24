@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBQXHP5R5K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-VBQXHP5R5K');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Anubhav Rohilla - AI/ML Engineer</title>
+    <meta name="description"
+        content="Explore projects by Anubhav Rohilla - from NLP production pipelines to AI-powered forecasting solutions.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://anubhav-rohilla.github.io/projects.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/extra.css" rel="stylesheet">
+    <link href="assets/css/chatbot.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Anubhav Rohilla</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i data-feather="menu" style="color: #64ffda;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+                            <i data-feather="sun"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="py-5" style="margin-top: 80px; background: var(--primary);">
+        <div class="container py-5 text-center">
+            <span style="color: var(--accent); font-weight: 500; letter-spacing: 1px;"
+                data-aos="fade-up">PORTFOLIO</span>
+            <h1 style="color: var(--light); font-size: 2.8rem; font-weight: 700; margin: 1rem 0;" data-aos="fade-up"
+                data-aos-delay="100">
+                Featured <span style="color: var(--accent);">Solutions</span>
+            </h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto;"
+                data-aos="fade-up" data-aos-delay="200">
+                Real-world applications solving business problems through automation, AI, and intelligent system design.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-5" style="background: var(--secondary);">
+        <div class="container py-4">
+            <div class="row g-4">
+                <!-- Project 1: Resume Parser -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectResumeModal"
+                        style="cursor: pointer;">
+                        <img src="assets/images/resume_parser.jpg" class="project-image" alt="AI Resume Parser">
+                        <div class="project-content">
+                            <span class="project-problem">Recruitment Automation</span>
+                            <h5 class="project-title">AI-Powered Resume Parser</h5>
+                            <p class="project-description">
+                                Automated extraction engine using SpaCy and Regex, achieving 92% precision in NER for
+                                complex document structures.
+                            </p>
+                            <div class="project-tech">
+                                <span>SpaCy</span>
+                                <span>Regex</span>
+                                <span>Python</span>
+                                <span>NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Voice Cloning -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectVoiceModal"
+                        style="cursor: pointer;">
+                        <img src="assets/images/voice_cloning.jpg" class="project-image" alt="Voice Cloning AI">
+                        <div class="project-content">
+                            <span class="project-problem">Digital Synthesis</span>
+                            <h5 class="project-title">Real-Time Voice Cloning</h5>
+                            <p class="project-description">
+                                Low-latency voice synthesis pipeline with multi-modal emotion recognition to dynamically
+                                modulate voice tone.
+                            </p>
+                            <div class="project-tech">
+                                <span>PyTorch</span>
+                                <span>TTS</span>
+                                <span>Emotion AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Demand Forecasting -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectForecastModal"
+                        style="cursor: pointer;">
+                        <img src="assets/images/forecasting.jpg" class="project-image" alt="Demand Forecasting">
+                        <div class="project-content">
+                            <span class="project-problem">Inventory Optimization</span>
+                            <h5 class="project-title">Demand Forecasting</h5>
+                            <p class="project-description">
+                                Multi-model forecasting system using ARIMA, Prophet, and XGBoost to predict trends for
+                                high-demand retail SKUs.
+                            </p>
+                            <div class="project-tech">
+                                <span>XGBoost</span>
+                                <span>ARIMA</span>
+                                <span>Prophet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: FightCam -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#project1Modal"
+                        style="cursor: pointer;">
+                        <video class="project-image" style="object-fit: cover;" muted>
+                            <source src="assets/fightcam.mp4" type="video/mp4">
+                        </video>
+                        <div class="project-content">
+                            <span class="project-problem">Security Monitoring</span>
+                            <h5 class="project-title">FightCam AI</h5>
+                            <p class="project-description">
+                                Real-time action detection system using computer vision to identify and alert on
+                                physical altercations.
+                            </p>
+                            <div class="project-tech">
+                                <span>OpenCV</span>
+                                <span>MediaPipe</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Image Classification -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#project2Modal"
+                        style="cursor: pointer;">
+                        <img src="assets/image.png" class="project-image" alt="Image Classification">
+                        <div class="project-content">
+                            <span class="project-problem">Manual Classification</span>
+                            <h5 class="project-title">Vision Recognition Engine</h5>
+                            <p class="project-description">
+                                Deep learning model for automated image classification, designed to reduce manual review
+                                time significantly.
+                            </p>
+                            <div class="project-tech">
+                                <span>PyTorch</span>
+                                <span>CNN</span>
+                                <span>OpenCV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Snake Fusion -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectSnakeModal"
+                        style="cursor: pointer;">
+                        <img src="assets/snake_fusion/main_menu.jpg" class="project-image" alt="Snake Fusion">
+                        <div class="project-content">
+                            <span class="project-problem">Mobile App Development</span>
+                            <h5 class="project-title">Snake Fusion</h5>
+                            <p class="project-description">
+                                Modern, feature-rich mobile game built with Flutter demonstrating cross-platform app
+                                development skills.
+                            </p>
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Project 1 Modal: Resume Parser -->
+    <div class="modal fade" id="projectResumeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">AI-Powered Resume Parser
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/resume_parser.jpg" class="img-fluid rounded mb-4" alt="AI Resume Parser">
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">Manual resume filtering is slow and inefficient for
+                            large-scale recruitment.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Architected an automated extraction
+                        engine using SpaCy and Regex, achieving 92% precision in named entity recognition (NER) for
+                        complex document structures.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Key Outcomes:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Operationalized high-throughput pipelines to output structured JSON/CSV.</li>
+                        <li>Reduced manual data entry time by 8 hours per week.</li>
+                        <li>Enabled seamless Applicant Tracking System (ATS) integration.</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">SpaCy</span>
+                        <span class="skill-tag primary">Regex</span>
+                        <span class="skill-tag primary">Python</span>
+                        <span class="skill-tag primary">NLP</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal: Voice Cloning -->
+    <div class="modal fade" id="projectVoiceModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">Real-Time Voice Cloning</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/voice_cloning.jpg" class="img-fluid rounded mb-4" alt="Voice Cloning AI">
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">Lack of expressive and authentic digital voice
+                            synthesis for interactive applications.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Constructed a low-latency voice
+                        synthesis pipeline achieving less than 400ms inference on constrained hardware.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Technical Highlights:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Multi-modal emotion recognition module for dynamic modulation.</li>
+                        <li>Prosody and pitch control in real time.</li>
+                        <li>Optimized for low-latency performance.</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">PyTorch</span>
+                        <span class="skill-tag primary">TTS</span>
+                        <span class="skill-tag primary">Emotion AI</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal: Demand Forecasting -->
+    <div class="modal fade" id="projectForecastModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">Demand Forecasting Assistant
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/forecasting.jpg" class="img-fluid rounded mb-4" alt="Demand Forecasting">
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">Stock-out events and inefficient resource allocation
+                            due to unpredictable demand trends.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Developed a robust multi-model
+                        forecasting system using ARIMA, Prophet, and XGBoost to predict trends for high-demand retail
+                        SKUs.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Key Achievements:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Reduced stock-out events by 30% through precise time-series modeling.</li>
+                        <li>Achieved 15% optimization in resource allocation.</li>
+                        <li>Ensemblled multiple models for higher accuracy.</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">XGBoost</span>
+                        <span class="skill-tag primary">ARIMA</span>
+                        <span class="skill-tag primary">Prophet</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 1 Modal: FightCam -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">FightCam AI</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video src="assets/fightcam.mp4" class="img-fluid rounded mb-4" controls
+                        style="width: 100%;"></video>
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">Manual security monitoring is inefficient and prone
+                            to human error.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Built a real-time action detection
+                        system using computer vision to automatically identify and alert on physical altercations in
+                        video feeds.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Key Features:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Real-time pose and face landmark detection using OpenCV & MediaPipe</li>
+                        <li>Action recognition pipeline to detect fights and aggressive gestures</li>
+                        <li>Instant predictions and automated alerts</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">OpenCV</span>
+                        <span class="skill-tag primary">MediaPipe</span>
+                        <span class="skill-tag primary">Python</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <a href="https://github.com/Anubhav-Rohilla/Fightcam-motion_controller_SDK_for_PC_games."
+                        target="_blank" class="btn btn-outline-cyber">
+                        <i data-feather="github" style="width: 16px; height: 16px; margin-right: 8px;"></i>View Code
+                    </a>
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal: Image Classification -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">Vision Recognition Engine
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/image.png" class="img-fluid rounded mb-4" alt="Image Classification">
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">Manual image classification is time-consuming and
+                            inconsistent.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Developed a convolutional neural network
+                        for automated image classification, significantly reducing manual review effort.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Technical Highlights:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Custom ResNet architecture with skip connections</li>
+                        <li>Data augmentation pipeline to improve generalization</li>
+                        <li>Model optimization for deployment</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">PyTorch</span>
+                        <span class="skill-tag primary">CNN</span>
+                        <span class="skill-tag primary">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal: Langua Link -->
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">Langua Link</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="languaLinkCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="assets/images/banner.jpeg" class="d-block w-100" alt="Banner">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/login_screen.jpeg" class="d-block w-100" alt="Login Screen">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/live_chat.jpeg" class="d-block w-100" alt="Live Chat">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#languaLinkCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#languaLinkCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">Language barriers reduce collaboration efficiency in
+                            global teams.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Built a real-time communication platform
+                        with voice cloning and translation, enabling seamless cross-language collaboration.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Key Features:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li><strong>Voice Cloning:</strong> Uses RVC for instant voice conversion</li>
+                        <li><strong>Real-time Translation:</strong> Low-latency speech-to-speech translation</li>
+                        <li><strong>Secure Authentication:</strong> Robust user management system</li>
+                        <li><strong>Multi-language Support:</strong> English, Hindi, and more</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">RVC</span>
+                        <span class="skill-tag primary">FastAPI</span>
+                        <span class="skill-tag primary">WebSockets</span>
+                        <span class="skill-tag primary">React</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 4 Modal: Medical Diagnosis -->
+    <div class="modal fade" id="project4Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">Medical Diagnosis Assistant
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/image.png" class="img-fluid rounded mb-4" alt="Medical Diagnosis">
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">Preliminary diagnosis is time-intensive and
+                            resource-heavy.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Developed an ML-powered system that
+                        analyzes symptoms and provides preliminary diagnosis suggestions to support healthcare
+                        professionals.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Technical Approach:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Ensemble model combining XGBoost and Random Forest</li>
+                        <li>Trained on medical symptom-disease dataset</li>
+                        <li>Flask API for integration with healthcare systems</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">Scikit-learn</span>
+                        <span class="skill-tag primary">XGBoost</span>
+                        <span class="skill-tag primary">Flask</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 5 Modal: AI Chatbot -->
+    <div class="modal fade" id="project5Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">AI Support Chatbot</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/image.png" class="img-fluid rounded mb-4" alt="AI Chatbot">
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Problem:</strong>
+                        <span style="color: var(--text-secondary);">High support ticket volume and slow response
+                            times.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Built an intelligent conversational
+                        agent that handles common customer inquiries autonomously, reducing support workload.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Capabilities:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Intent classification using transformer models</li>
+                        <li>Context-aware responses with memory</li>
+                        <li>Seamless handoff to human agents when needed</li>
+                        <li>FastAPI backend for low-latency responses</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">Transformers</span>
+                        <span class="skill-tag primary">HuggingFace</span>
+                        <span class="skill-tag primary">FastAPI</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 6 Modal: Snake Fusion -->
+    <div class="modal fade" id="projectSnakeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"
+                style="background: var(--secondary); border: 1px solid var(--border-color); color: var(--light);">
+                <div class="modal-header" style="border-color: var(--border-color);">
+                    <h5 class="modal-title" style="color: var(--accent); font-weight: 600;">Snake Fusion</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/snake_fusion/main_menu.jpg" class="img-fluid rounded mb-4" alt="Snake Fusion">
+
+                    <div
+                        style="background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 1rem; margin-bottom: 1rem; border-radius: 0 4px 4px 0;">
+                        <strong style="color: var(--accent);">Objective:</strong>
+                        <span style="color: var(--text-secondary);">Demonstrate cross-platform mobile development
+                            capabilities.</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary);">
+                        <strong style="color: var(--light);">Solution:</strong> Built a modern, feature-rich mobile game
+                        using Flutter, showcasing UI/UX design and app architecture skills.
+                    </p>
+
+                    <h6 style="color: var(--light); margin-top: 1.5rem;">Features:</h6>
+                    <ul style="color: var(--text-secondary);">
+                        <li>Cross-platform (iOS & Android) from single codebase</li>
+                        <li>Smooth animations and responsive controls</li>
+                        <li>Progressive difficulty and score tracking</li>
+                    </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem;">
+                        <span class="skill-tag primary">Flutter</span>
+                        <span class="skill-tag primary">Dart</span>
+                        <span class="skill-tag primary">Mobile Dev</span>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-color: var(--border-color);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: var(--primary);">
+        <div class="container text-center" data-aos="fade-up">
+            <h3 style="color: var(--light); margin-bottom: 1rem;">Want to See More?</h3>
+            <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 1.5rem;">
+                These projects demonstrate my approach to solving real problems. Let's discuss how I can apply these
+                skills to your team.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                <a href="contact.html" class="btn btn-cyber">
+                    <i data-feather="mail" style="width: 18px; height: 18px; margin-right: 8px;"></i>Get In Touch
+                </a>
+                <a href="https://github.com/Anubhav-Rohilla" target="_blank" class="btn btn-outline-cyber">
+                    <i data-feather="github" style="width: 18px; height: 18px; margin-right: 8px;"></i>View GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0" style="color: var(--text-secondary);">
+                        © 2026 Anubhav Rohilla. Building solutions that matter.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="https://github.com/Anubhav-Rohilla" target="_blank" aria-label="GitHub Profile">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/anubhav-rohilla" target="_blank" aria-label="LinkedIn Profile">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="mailto:kushrohilla10@gmail.com" aria-label="Email Anubhav Rohilla">
+                            <i data-feather="mail"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 600,
+            easing: 'ease-out',
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Loading Screen
+        window.addEventListener('load', () => {
+            document.getElementById('loadingOverlay').classList.add('fade-out');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/features.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+</body>
+
+</html>
