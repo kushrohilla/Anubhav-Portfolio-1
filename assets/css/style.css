@@ -43,10 +43,10 @@
     box-sizing: border-box;
 }
 
-/* Center-focused narrow layout matching 60-70% content width */
+/* Modern Layout: 80% content width, 20% total empty margins */
 .container {
-    width: 90% !important;
-    /* 5% blank space on left/right for mobile */
+    width: 92% !important;
+    /* Small gap for mobile screens */
     max-width: none !important;
     margin: 0 auto !important;
     padding-left: 15px !important;
@@ -55,22 +55,23 @@
 
 @media (min-width: 768px) {
     .container {
-        width: 80% !important;
-        /* 10% blank space on left/right for tablets */
+        width: 88% !important;
+        /* Slight padding for tablets */
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        width: 70% !important;
-        /* EXACTLY 70% width for content, 15% blank on left/right for PC/Laptops */
+        width: 80% !important;
+        /* EXACTLY 80% width for content, 10% empty space on each side for laptops/desktops */
     }
 }
 
 @media (min-width: 1440px) {
     .container {
-        width: 60% !important;
-        /* 60% width for content, 20% blank on left/right on Large screens */
+        width: 80% !important;
+        max-width: 1300px !important;
+        /* Prevents stretching too wide on 4K/Ultra-wide monitors */
     }
 }
 
