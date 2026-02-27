@@ -43,44 +43,34 @@
     box-sizing: border-box;
 }
 
-/* User-requested narrow percentage-based padding layout */
+/* Center-focused narrow layout matching 60-70% content width */
 .container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 5% !important;
-    /* Total bounded area space for small mobile */
-    padding-right: 5% !important;
+    width: 90% !important;
+    /* 5% blank space on left/right for mobile */
+    max-width: none !important;
     margin: 0 auto !important;
-}
-
-@media (min-width: 500px) {
-    .container {
-        padding-left: 8% !important;
-        padding-right: 8% !important;
-    }
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
 
 @media (min-width: 768px) {
     .container {
-        padding-left: 10% !important;
-        /* Total 20% padding */
-        padding-right: 10% !important;
+        width: 80% !important;
+        /* 10% blank space on left/right for tablets */
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        padding-left: 15% !important;
-        /* Total 30% padding */
-        padding-right: 15% !important;
+        width: 70% !important;
+        /* EXACTLY 70% width for content, 15% blank on left/right for PC/Laptops */
     }
 }
 
 @media (min-width: 1440px) {
     .container {
-        padding-left: 17.5% !important;
-        /* Total 35% padding */
-        padding-right: 17.5% !important;
+        width: 60% !important;
+        /* 60% width for content, 20% blank on left/right on Large screens */
     }
 }
 
