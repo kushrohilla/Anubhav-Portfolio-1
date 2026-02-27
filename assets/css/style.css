@@ -752,6 +752,17 @@ a:hover {
 }
 
 /* =====================================================
+   TESTIMONIAL
+   ===================================================== */
+.testimonial-card {
+    background: transparent;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+}
+
+
+/* =====================================================
    RESPONSIVE DESIGN
    Comprehensive responsive rules are in responsive.css
    The rules below handle residual legacy layout needs

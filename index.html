@@ -48,8 +48,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto" data-aos="fade-left">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#featured-projects">Featured Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item">
@@ -78,9 +79,10 @@
                         <div class="typewriter" id="typewriter"></div>
                     </div>
 
-                    <p class="hero-subtitle">
-                        I build scalable, production-ready AI solutions and robust backend APIs, bridging the gap
-                        between machine learning models and real-world applications.
+                    <p class="hero-subtitle" style="text-align: left;">
+                        <strong style="color: var(--light);">Who I am:</strong> An AI/ML & Full-Stack Engineer.<br>
+                        <strong style="color: var(--light);">What I can do:</strong> Deploy scalable ML pipelines, optimize latency by 30%, and ensure 98% data integrity.<br>
+                        <strong style="color: var(--light);">What I want next:</strong> Targeting an AI/ML Engineer or Data Scientist role to drive business value.
                     </p>
 
                     <div class="hero-credibility">
@@ -117,238 +119,8 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="py-5 position-relative" style="background: var(--primary);">
-        <div class="container py-5">
-            <h2 class="section-title" data-aos="fade-up">Core Expertise</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies & Skills I Work With</p>
-
-            <div id="skills-graph-container" class="skills-graph-container" data-aos="zoom-in">
-                <!-- 3D Graph will render here -->
-                <div class="graph-overlay">
-                    <span>Interactive 3D Skill Connectivity Map</span>
-                </div>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="200">
-                <!-- AI/ML & NLP - FIRST -->
-                <div class="col-lg-4 mb-4">
-                    <div class="skills-category">
-                        <h4 class="skills-category-title">AI/ML & NLP</h4>
-                        <div>
-                            <span class="skill-tag primary">TensorFlow</span>
-                            <span class="skill-tag primary">PyTorch</span>
-                            <span class="skill-tag primary">Scikit-learn</span>
-                            <span class="skill-tag primary">Transformers</span>
-                            <span class="skill-tag primary">LangChain</span>
-                            <span class="skill-tag primary">LLMs</span>
-                            <span class="skill-tag primary">OpenAI APIs</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Programming & Backend - SECOND -->
-                <div class="col-lg-4 mb-4">
-                    <div class="skills-category">
-                        <h4 class="skills-category-title">Backend & Data</h4>
-                        <div>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Flask / Django</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">SQL / PostgreSQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Pandas / NumPy</span>
-                            <span class="skill-tag">Vector DBs</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DevOps & Mobile - THIRD -->
-                <div class="col-lg-4 mb-4">
-                    <div class="skills-category">
-                        <h4 class="skills-category-title">DevOps & Mobile</h4>
-                        <div>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">CI/CD</span>
-                            <span class="skill-tag">Azure / AWS</span>
-                            <span class="skill-tag">MLOps</span>
-                            <span class="skill-tag">Flutter / Dart</span>
-                            <span class="skill-tag">Salesforce</span>
-                            <span class="skill-tag">REST APIs</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive AI Lab Demo Section -->
-    <section class="py-5" style="background: var(--primary);">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">The Interactive Lab</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">See AI in action right now</p>
-
-            <div class="row g-4 justify-content-center">
-                <!-- NLP Demo -->
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="lab-card h-100">
-                        <h4 style="color: var(--accent); margin-bottom: 1rem;"><i data-feather="message-square"
-                                style="margin-right: 10px;"></i>NLP Entity Recognition</h4>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Type a bio to see how AI extracts meaning.
-                        </p>
-                        <input type="text" id="ner-input" class="ner-demo-input"
-                            placeholder="e.g. Anubhav works with Python in Azure...">
-                        <button id="ner-btn" class="btn btn-cyber w-100 mb-3">Extract Entities</button>
-                        <div id="ner-result" class="ner-result">Waiting for input...</div>
-                    </div>
-                </div>
-
-                <!-- Vision Demo -->
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="lab-card h-100">
-                        <h4 style="color: var(--accent); margin-bottom: 1rem;"><i data-feather="eye"
-                                style="margin-right: 10px;"></i>Real-Time Object Detection</h4>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Run COCO-SSD models directly in your browser.
-                        </p>
-                        <div class="vision-container">
-                            <video id="webcam" autoplay muted playsinline></video>
-                            <canvas id="vision-canvas"></canvas>
-                        </div>
-                        <button id="vision-btn" class="btn btn-outline-cyber w-100 mt-3">Activate Vision</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Hire Me Section -->
-    <section class="why-hire-section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Why Hire Me?</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">What sets me apart from other candidates
-            </p>
-
-            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-md-6 col-lg-3">
-                    <div class="why-hire-card">
-                        <div class="why-hire-icon">
-                            <i data-feather="briefcase"></i>
-                        </div>
-                        <h5 class="why-hire-title">Business-First Thinking</h5>
-                        <p class="why-hire-text">I understand business problems, not just code. Every solution I build
-                            focuses on reducing costs and improving efficiency.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="why-hire-card">
-                        <div class="why-hire-icon">
-                            <i data-feather="users"></i>
-                        </div>
-                        <h5 class="why-hire-title">Real-World Mentorship</h5>
-                        <p class="why-hire-text">Trained under a Salesforce Architect with 12+ years of experience. Not
-                            tutorials — real enterprise guidance.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="why-hire-card">
-                        <div class="why-hire-icon">
-                            <i data-feather="cpu"></i>
-                        </div>
-                        <h5 class="why-hire-title">AI + Full-Stack Hybrid</h5>
-                        <p class="why-hire-text">A rare combination of machine learning expertise (NLP/MLOps) and robust
-                            full-stack development skills (Flutter/Flask/Salesforce).</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="why-hire-card">
-                        <div class="why-hire-icon">
-                            <i data-feather="home"></i>
-                        </div>
-                        <h5 class="why-hire-title">Remote-Ready</h5>
-                        <p class="why-hire-text">Experienced working remotely with international teams. Self-driven,
-                            communicative, and deadline-focused.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications & Experience -->
-    <section class="py-5" style="background: var(--secondary);">
-        <div class="container py-4">
-            <h2 class="section-title" data-aos="fade-up">Credentials & Experience</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Proof of capability</p>
-
-            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-md-6">
-                    <div class="cert-badge">
-                        <div class="cert-icon">
-                            <i data-feather="award"></i>
-                        </div>
-                        <div class="cert-info">
-                            <h5>Azure AI Engineer Associate</h5>
-                            <p>Microsoft Certification</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="cert-badge">
-                        <div class="cert-icon">
-                            <i data-feather="briefcase"></i>
-                        </div>
-                        <div class="cert-info">
-                            <h5>Junior Software Engineer</h5>
-                            <p>Techventive IT Solutions Pvt. Ltd.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Data Storytelling Dashboard -->
-    <section class="py-5" style="background: var(--primary);">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Performance Metrics</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Measuring impact with data</p>
-
-            <div class="row g-4">
-                <div class="col-lg-8" data-aos="fade-right">
-                    <div class="lab-card">
-                        <canvas id="metricsChart"></canvas>
-                    </div>
-                </div>
-                <div class="col-lg-4" data-aos="fade-left">
-                    <div class="glass-panel p-4">
-                        <h5 class="text-accent mb-3">Model Benchmarks</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-3 d-flex justify-content-between">
-                                <span class="text-secondary">Latency (NLP)</span>
-                                <span class="text-light">~45ms</span>
-                            </li>
-                            <li class="mb-3 d-flex justify-content-between">
-                                <span class="text-secondary">Precision</span>
-                                <span class="text-light">94.2%</span>
-                            </li>
-                            <li class="mb-3 d-flex justify-content-between">
-                                <span class="text-secondary">Recall</span>
-                                <span class="text-light">91.8%</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Featured Projects Section -->
-    <section class="projects-section py-5">
+    <section id="featured-projects" class="projects-section py-5">
         <div class="container py-5">
             <div class="row mb-5">
                 <div class="col-12">
@@ -438,6 +210,216 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 position-relative" style="background: var(--primary);">
+        <div class="container py-5">
+            <h2 class="section-title" data-aos="fade-up">Core Expertise</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies & Skills I Work With</p>
+
+            <div id="skills-graph-container" class="skills-graph-container" data-aos="zoom-in">
+                <!-- 3D Graph will render here -->
+                <div class="graph-overlay">
+                    <span>Interactive 3D Skill Connectivity Map</span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <!-- Core Tech -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skills-category h-100">
+                        <h4 class="skills-category-title">Core Tech (Strongest / Production)</h4>
+                        <div>
+                            <span class="skill-tag primary">Python</span>
+                            <span class="skill-tag primary">PyTorch / TensorFlow</span>
+                            <span class="skill-tag primary">Scikit-learn</span>
+                            <span class="skill-tag primary">Flask / FastAPI</span>
+                            <span class="skill-tag primary">SQL / PostgreSQL</span>
+                            <span class="skill-tag primary">Pandas / NumPy</span>
+                            <span class="skill-tag primary">Git / CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Familiar With -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skills-category h-100">
+                        <h4 class="skills-category-title">Familiar With (Secondary / Learning)</h4>
+                        <div>
+                            <span class="skill-tag">Flutter / Dart</span>
+                            <span class="skill-tag">Transformers / LLMs</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">Azure / AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Salesforce</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Vector DBs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive AI Lab Demo Section -->
+    <section class="py-5" style="background: var(--primary);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">The Interactive Lab</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">See AI in action right now</p>
+
+            <div class="row g-4 justify-content-center">
+                <!-- NLP Demo -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="lab-card h-100">
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;"><i data-feather="message-square"
+                                style="margin-right: 10px;"></i>NLP Entity Recognition</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Type a bio to see how AI extracts meaning.
+                        </p>
+                        <input type="text" id="ner-input" class="ner-demo-input"
+                            placeholder="e.g. Anubhav works with Python in Azure...">
+                        <button id="ner-btn" class="btn btn-cyber w-100 mb-3">Extract Entities</button>
+                        <div id="ner-result" class="ner-result">Waiting for input...</div>
+                    </div>
+                </div>
+
+                <!-- Vision Demo -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="lab-card h-100">
+                        <h4 style="color: var(--accent); margin-bottom: 1rem;"><i data-feather="eye"
+                                style="margin-right: 10px;"></i>Real-Time Object Detection</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Run COCO-SSD models directly in your browser.
+                        </p>
+                        <div class="vision-container">
+                            <video id="webcam" autoplay muted playsinline></video>
+                            <canvas id="vision-canvas"></canvas>
+                        </div>
+                        <button id="vision-btn" class="btn btn-outline-cyber w-100 mt-3">Activate Vision</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Hire Me Section -->
+    <section class="why-hire-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Hire Me?</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">What sets me apart from other candidates
+            </p>
+
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-hire-card">
+                        <div class="why-hire-icon">
+                            <i data-feather="briefcase"></i>
+                        </div>
+                        <h5 class="why-hire-title">Latency Optimization</h5>
+                        <p class="why-hire-text">Reduced model inference latency by 30% in production using optimized pipelines and low-latency architectures.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-hire-card">
+                        <div class="why-hire-icon">
+                            <i data-feather="users"></i>
+                        </div>
+                        <h5 class="why-hire-title">Precision Delivery</h5>
+                        <p class="why-hire-text">Achieved 92% precision in SpaCy/Regex NER parsing across complex document structures for a high-volume extraction engine.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-hire-card">
+                        <div class="why-hire-icon">
+                            <i data-feather="cpu"></i>
+                        </div>
+                        <h5 class="why-hire-title">Data Integrity</h5>
+                        <p class="why-hire-text">Standardized 23+ raw data fields, elevating overall dataset integrity to 98% for upstream ML model consumption.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-hire-card">
+                        <div class="why-hire-icon">
+                            <i data-feather="home"></i>
+                        </div>
+                        <h5 class="why-hire-title">Production Scaling</h5>
+                        <p class="why-hire-text">Automated internal tooling via robust Python/Flask CI/CD workflows, actively supporting 100+ concurrent enterprise users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Experience -->
+    <section class="py-5" style="background: var(--secondary);">
+        <div class="container py-4">
+            <h2 class="section-title" data-aos="fade-up">Credentials & Experience</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Proof of capability</p>
+
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6">
+                    <div class="cert-badge">
+                        <div class="cert-icon">
+                            <i data-feather="award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h5>Azure AI Engineer Associate</h5>
+                            <p>Microsoft Certification</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="cert-badge">
+                        <div class="cert-icon">
+                            <i data-feather="briefcase"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h5>Junior Software Engineer</h5>
+                            <p>Techventive IT Solutions Pvt. Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Storytelling Dashboard -->
+    <section class="py-5" style="background: var(--primary);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Performance Metrics</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Measuring impact with data</p>
+
+            <div class="row g-4">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="lab-card">
+                        <canvas id="metricsChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left">
+                    <div class="glass-panel p-4">
+                        <h5 class="text-accent mb-3">Model Benchmarks</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex justify-content-between">
+                                <span class="text-secondary">Latency (NLP)</span>
+                                <span class="text-light">~45ms</span>
+                            </li>
+                            <li class="mb-3 d-flex justify-content-between">
+                                <span class="text-secondary">Precision</span>
+                                <span class="text-light">94.2%</span>
+                            </li>
+                            <li class="mb-3 d-flex justify-content-between">
+                                <span class="text-secondary">Recall</span>
+                                <span class="text-light">91.8%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- MLOps Strategy Section -->
