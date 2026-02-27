@@ -47,37 +47,40 @@
 .container {
     width: 100% !important;
     max-width: 100% !important;
-    padding-left: 20px !important;
-    /* Kept at 20px to prevent text squishing on small mobile */
-    padding-right: 20px !important;
+    padding-left: 5% !important;
+    /* Total bounded area space for small mobile */
+    padding-right: 5% !important;
     margin: 0 auto !important;
 }
 
 @media (min-width: 500px) {
     .container {
-        padding-left: 10% !important;
-        padding-right: 10% !important;
+        padding-left: 8% !important;
+        padding-right: 8% !important;
     }
 }
 
 @media (min-width: 768px) {
     .container {
-        padding-left: 20% !important;
-        padding-right: 20% !important;
+        padding-left: 10% !important;
+        /* Total 20% padding */
+        padding-right: 10% !important;
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        padding-left: 30% !important;
-        padding-right: 30% !important;
+        padding-left: 15% !important;
+        /* Total 30% padding */
+        padding-right: 15% !important;
     }
 }
 
 @media (min-width: 1440px) {
     .container {
-        padding-left: 35% !important;
-        padding-right: 35% !important;
+        padding-left: 17.5% !important;
+        /* Total 35% padding */
+        padding-right: 17.5% !important;
     }
 }
 
