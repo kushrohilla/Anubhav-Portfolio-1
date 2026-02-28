@@ -1,4 +1,3 @@
-
 /* =====================================================
    1. UNIVERSAL MOBILE BASE
    ===================================================== */
@@ -49,11 +48,9 @@ span.ner-tag {
     display: inline-block;
 }
 
-/* Fix horizontal overflow everywhere */
-body,
-section,
-.container,
-.row {
+/* Fix horizontal overflow */
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -239,7 +236,7 @@ section,
         min-height: 160px !important;
     }
 
-    .profile-container > i[data-feather] {
+    .profile-container>i[data-feather] {
         width: 80px !important;
         height: 80px !important;
     }
@@ -279,7 +276,7 @@ section,
         min-height: 200px !important;
     }
 
-    .profile-container > i[data-feather] {
+    .profile-container>i[data-feather] {
         width: 100px !important;
         height: 100px !important;
     }
@@ -329,11 +326,6 @@ section,
     .py-4 {
         padding-top: 1.5rem !important;
         padding-bottom: 1.5rem !important;
-    }
-
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
     }
 
     .section-title {
@@ -660,9 +652,20 @@ section,
     }
 
     @keyframes flow {
-        0%   { transform: rotate(90deg) translateX(-5px); opacity: 0.2; }
-        50%  { transform: rotate(90deg) translateX(5px);  opacity: 1;   }
-        100% { transform: rotate(90deg) translateX(-5px); opacity: 0.2; }
+        0% {
+            transform: rotate(90deg) translateX(-5px);
+            opacity: 0.2;
+        }
+
+        50% {
+            transform: rotate(90deg) translateX(5px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotate(90deg) translateX(-5px);
+            opacity: 0.2;
+        }
     }
 }
 
@@ -913,7 +916,8 @@ section,
     }
 
     .form-control {
-        font-size: 16px !important; /* Prevents iOS zoom on input focus */
+        font-size: 16px !important;
+        /* Prevents iOS zoom on input focus */
         padding: 10px 14px !important;
     }
 
@@ -938,6 +942,7 @@ section,
    ===================================================== */
 
 @media (max-width: 479px) {
+
     /* Resume download area */
     iframe {
         height: 420px !important;
@@ -992,6 +997,7 @@ section,
    ===================================================== */
 
 @media (max-width: 479px) {
+
     /* About hero section */
     section[style*="margin-top: 80px"] {
         margin-top: 70px !important;
@@ -1017,7 +1023,7 @@ section,
         gap: 0.75rem !important;
     }
 
-    .glass-panel .d-flex > div[style*="50px"] {
+    .glass-panel .d-flex>div[style*="50px"] {
         width: 42px !important;
         height: 42px !important;
         min-width: 42px;
@@ -1120,6 +1126,7 @@ section,
    ===================================================== */
 
 @media (max-width: 767px) {
+
     /* Prevent hover styles sticking after tap on mobile */
     .btn-cyber:hover,
     .btn-outline-cyber:hover,
@@ -1170,15 +1177,6 @@ section,
    ===================================================== */
 
 @supports (padding: max(0px)) {
-    body {
-        padding-left: max(0px, env(safe-area-inset-left));
-        padding-right: max(0px, env(safe-area-inset-right));
-    }
-
-    .navbar {
-        padding-left: max(0px, env(safe-area-inset-left));
-        padding-right: max(0px, env(safe-area-inset-right));
-    }
 
     .footer {
         padding-bottom: max(1.75rem, env(safe-area-inset-bottom));
@@ -1230,7 +1228,8 @@ section,
    ===================================================== */
 
 @media (-webkit-min-device-pixel-ratio: 2),
-       (min-resolution: 192dpi) {
+(min-resolution: 192dpi) {
+
     /* Ensure crisp borders */
     .navbar,
     .glass-panel,
@@ -1245,6 +1244,7 @@ section,
    ===================================================== */
 
 @media print {
+
     .navbar,
     .footer,
     .chatbot-container,
